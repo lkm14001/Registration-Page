@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>V Tie-in Registration</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="keywords" content="tie-in,tie-in signup">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/main.css">
+        <script>
+            function radioclick(){
+        if(document.getElementById("doc").checked){
+            document.getElementById("docreg").style.display='block';
+            document.getElementById("docadhaar").style.display='block';
+            document.getElementById("dochos").style.display='block';
+            document.getElementById("stucol").style.display='none';
+            document.getElementById("stuadhaar").style.display='none';
+
+        }
+    }
+    function radioclick2(){
+        if(document.getElementById("student").checked){
+            document.getElementById("stucol").style.display='block';
+            document.getElementById("stuadhaar").style.display='block';
+            document.getElementById("docreg").style.display='none';
+            document.getElementById("docadhaar").style.display='none';
+            document.getElementById("dochos").style.display='none';
+        }
+    }
+    function radioclick3(){
+        if(document.getElementById("otherbutton").checked){
+            document.getElementById("otherdetails").style.display="block";
+            document.getElementById("otherdetails2").style.display="block";
+            document.getElementById("stucol").style.display='none';
+            document.getElementById("stuadhaar").style.display='none';
+            document.getElementById("docreg").style.display='none';
+            document.getElementById("docadhaar").style.display='none';
+            document.getElementById("dochos").style.display='none';
+        }
+    }
+
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li id="right"><a href="#">Sign In</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="welcome">
+                <h2>Welcomr to V Tie-in</h2>
+            </div>
+            <div class="signin">
+                <div class="centerform">
+                    <form action="./php/submit.php" id="signinform">
+                        <table class="formsignin">
+                            <tr>
+                                <td><label for="fname">First Name</label></td>
+                                <td><input type="text" id="fname" placeholder="Enter your First Name"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="mname">Middle Name</label></td>
+                                <td><input type="text" id="mname" placeholder="Enter Your Middle Name"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="lname">Last Name</label></td>
+                                <td><input type="text" id="lname" placeholder="Enter your Last Name"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="age">Age</label></td>
+                                <td><input type="text" id="age" placeholder="Enter your Age"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="email">Username</label></td>
+                                <td><input type="email" id="email" placeholder="Enter Your Username"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="pass">Password</label></td>
+                                <td><input type="password" id="pass" placeholder="Enter Your Password"></td>
+                            </tr>
+                            <tr>
+                                <td><p style="display: inline;">Gender</p></td>
+                                <td><input type="radio" id="male" name="gender" value="male">
+                                    <label for="male">Male</label>
+                                    <input type="radio" id="female" name="gender" value="female">
+                                    <label for="female">Female</label>
+                                    <input type="radio" id="Other" name="gender" value="other">
+                                    <label for="Other">Other</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><p style="display: inline;">Profession</p></td>
+                                <td>
+                                    <input type="radio" id="doc" name="prof" onclick="radioclick()">
+                                    <label for="doc">Doctor</label>
+                                    <input type="radio" id="student" name="prof" onclick="radioclick2()">
+                                    <label for="student"></label>Student</label>
+                                    <input type="radio" id="otherbutton" name="prof" onclick="radioclick3()">
+                                    <label for="other">Other</label>
+                                </td>
+                            </tr>
+                            <tr id="docreg" style="display: none;">
+                                <td><label for="regnum">Register Number</label></td>
+                                <td><input type="text" id="regnum" placeholder="Enter your Register Number"></td>
+                            </tr>
+                            <tr id="docadhaar" style="display: none;">
+                                <td><label for="adhaarnum">Adhaar Number</label></td>
+                                <td><input type="text" id="adhaarnum" placeholder="Enter your Adhaar Number"></td>
+                            </tr>
+                            <tr id="dochos" style="display: none;">
+                                <td><label for="hosname">Hospital Name</label></td>
+                                <td><input type="text" id="hosname" placeholder="Enter your Hospital Name"></td>
+                            </tr>
+                            <tr id="stucol" style="display: none;">
+                                <td><label for="colname">COllege Name</label></td>
+                                <td><input type="text" id="colname" placeholder="Enter College Name"></td>
+                            </tr>
+                            <tr id="stuadhaar" style="display: none;">
+                                <td><label for="stuadhaarnum">Adhaar Num</label></td>
+                                <td><input type="text" id="stuadhaarnum" placeholder="Enter Your Adhaar Number"></td>
+                            </tr>
+                            <tr id="otherdetails" style="display: none;">
+                                <td><label for="location">Location</label></td>
+                                <td><input type="text" id="location" placeholder="Enter Your Location"></td>
+                            </tr>
+                            <tr id="otherdetails2" style="display:none;">
+                                <td><label for="occ">Occupation</label></td>
+                                <td><input type="text" id="occ" placeholder="Enter Your Occupation"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="mob">Mobile Number</label></td>
+                                <td><input type="text" id="mob" placeholder="Enter Your Mobile Number"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="permanentadd">Permanent Address</label></td>
+                                <td><input type="text" id="permanentadd" placeholder="Enter Your Permanent Address"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="presentadd">Present Address</label></td>
+                                <td><input type="text" id="presentadd" placeholder="Enter Your Present Address"></td>
+                            </tr>
+                        </table>
+                    </form>
+                    <button type=submit form="signinform" value="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
