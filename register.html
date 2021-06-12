@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>V Tie-in Registration</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="keywords" content="tie-in,tie-in signup">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+            function radioclick(){
+        if(document.getElementById("doc").checked){
+            document.getElementById("docreg").style.display='block';
+            document.getElementById("stucol").style.display='none';
+            document.getElementById("otherdetails").style.display="none";
+            
+        }
+    }
+    function radioclick2(){
+        if(document.getElementById("student").checked){
+            document.getElementById("stucol").style.display='block';
+            document.getElementById("docreg").style.display='none';
+            document.getElementById("otherdetails").style.display="none";
+        } 
+    }
+    function radioclick3(){
+        if(document.getElementById("otherbutton").checked){
+            document.getElementById("otherdetails").style.display="block";
+            document.getElementById("stucol").style.display='none';
+            document.getElementById("docreg").style.display='none';
+            
+        }
+    }
+
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                        <li><a href="#"><i class="fa far fa-address-card"></i> About US</a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-envelope"></i> Contact US</a></li>
+                        <li><a href="register.html"><i class="fa fas fa-user-plus"></i> Register</a></li>
+                        <li><a href="Sign In.html"><i class="fa fa-fw fa-user"></i> Sign In</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="welcome">
+                <h2>Welcome to V Tie-in</h2>
+            </div>
+            <div class="signin">
+                <div class="centerform">
+                    <form action="./php/submit.php" id="signinform">
+                        <table class="table1">
+                            <tr>
+                                <td><label for="fname">First Name</label></td>
+                                <td><input type="text" id="fname" name="fname" placeholder="Enter your First Name"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="mname">Middle Name</label></td>
+                                <td><input type="text" id="mname" name="mname" placeholder="Enter Your Middle Name"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="lname">Last Name</label></td>
+                                <td><input type="text" id="lname" name="lname" placeholder="Enter your Last Name"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="age">Age</label></td>
+                                <td><input type="text" id="age" name="age" placeholder="Enter your Age"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="email">Username</label></td>
+                                <td><input type="email" id="email" name="userid" placeholder="Enter Your Username"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="pass">Password</label></td>
+                                <td><input type="password" id="pass" name="password" placeholder="Enter Your Password"></td>
+                            </tr>
+                            <tr>
+                                <td><p style="display: inline;">Gender</p></td>
+                                <td><input type="radio" id="male" name="gender" value="male">
+                                    <label for="male">Male</label>
+                                    <input type="radio" id="female" name="gender" value="female">
+                                    <label for="female">Female</label>
+                                    <input type="radio" id="Other" name="gender" value="other">
+                                    <label for="Other">Other</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><p style="display: inline;">Profession</p></td>
+                                <td>
+                                    <input type="radio" id="doc" name="prof" value="doctor" onclick="radioclick()">
+                                    <label for="doc">Doctor</label>
+                                    <input type="radio" id="student" name="prof" value="student" onclick="radioclick2()">
+                                    <label for="student"></label>Student</label>
+                                    <input type="radio" id="otherbutton" name="prof" value="other" onclick="radioclick3()">
+                                    <label for="other">Other</label>
+                                </td>
+                            </tr>
+                            <table class="hidtable" id="docreg" style="display: none;">
+                                <tr>
+                                    <td><label for="regnum">Register Number</label></td>
+                                    <td><input type="text" id="regnum" name="regno" placeholder="Enter your Register Number"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="adhaarnum">Adhaar Number</label></td>
+                                    <td><input type="text" id="adhaarnum" name="aadno" placeholder="Enter your Adhaar Number"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="hosname">Hospital Name</label></td>
+                                    <td><input type="text" id="hosname" name="hosno" placeholder="Enter your Hospital Name"></td>
+                                </tr>
+                            </table>
+                            <table class="hidtable" id="stucol" style="display: none;">
+                                <tr>
+                                    <td><label for="colname">COllege Name</label></td>
+                                    <td><input type="text" id="colname" name="collegename" placeholder="Enter College Name"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="stuadhaarnum">Adhaar Num</label></td>
+                                    <td><input type="text" id="stuadhaarnum" name="stuaadno" placeholder="Enter Your Adhaar Number"></td>
+                                </tr>
+                            </table>
+                            <table class="hidtable" id="otherdetails" style="display: none;">
+                                <tr>
+                                    <td><label for="location">Location</label></td>
+                                    <td><input type="text" id="location" name="location" placeholder="Enter Your Location"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="occ">Occupation</label></td>
+                                    <td><input type="text" id="occ" name="occupation" placeholder="Enter Your Occupation"></td>
+                                </tr>
+                            </table>
+                        </table>
+                        <table class="table2">
+                            <tr>
+                                <td><label for="mob">Mobile Number</label></td>
+                                <td><input type="text" id="mob" name="mobno" placeholder="Enter Your Mobile Number"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="permanentadd">Permanent Address</label></td>
+                                <td><input type="text" id="permanentadd" name="peradd" placeholder="Enter Your Permanent Address"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="presentadd">Present Address</label></td>
+                                <td><input type="text" id="presentadd" name="preadd" placeholder="Enter Your Present Address"></td>
+                            </tr>
+                        </table>   
+                        <button type=submit form="signinform" value="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
