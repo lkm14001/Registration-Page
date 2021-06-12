@@ -84,6 +84,7 @@
                             </tr>
                         </table>
                     </form>
+                    <button type="submit" form="login" value="login">Login</button>
                 </div>
             </div>
         </div>
