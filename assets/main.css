@@ -8,6 +8,7 @@
 .container{
     background-image: url(../images/3.jpg);
     min-height: 100vh;
+    min-width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -42,6 +43,7 @@
 .centerform{
     background:rgba(255, 255, 255, 0.1);
     padding: 2em;
+    display: flex;
     border-radius: 30px;
     border-left: 2px solid rgba(255, 255, 255, 0.3);
     border-top: 2px solid rgba(255, 255, 255, 0.3);
@@ -68,7 +70,16 @@ input[type=text],input[type=email],input[type=password]{
     text-transform: uppercase;
 
 }
-
+td
+.table1{
+    border-spacing: 30px 10px;
+}
+.table2{
+    border-spacing: 10px 10px;
+}
+.hidtable{
+    border-spacing: 20px 10px;
+}
 input:focus::placeholder{
     color:transparent;
 }
@@ -95,3 +106,77 @@ button{
     background-color: rgba(60,87,155,0.03);
 }
 
+
+@media screen and (max-width:1044px){
+    .navbar{
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width:8754px){
+    .navbar{
+        font-size: 70%;
+    }
+    .centerform{
+        font-size: 120%;
+    }
+    input[type=text],input[type=email],input[type=password]{
+        width:250px;
+    }
+}
+
+@media screen and (max-width:790px){
+    .welcome{
+        font-size: 100%;
+    }
+    ::placeholder{
+        font-size: 80%;
+        letter-spacing: 3%;
+    }
+    .navbar {
+        font-size: 65%;
+    }
+}
+@media screen and (max-width:709px){
+    .navbar ul {
+        flex-direction: column;
+    }
+    .navbar nav ul li{
+        padding-bottom: 10px;
+    }
+}
+@media screen and (max-width:750px){
+    .navbar{
+        font-size: 60%;
+    }
+}
+@media screen and (max-width:638px){
+    tr{
+        display:flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:420px){
+    input[type=text],input[type=email],input[type=password]{
+        width:200px;
+    }
+    ::placeholder{
+        font-size: 70%;
+    }
+    td{
+        padding-bottom: 10px;
+    }
+    .table1{
+        border-spacing:10px 30px;
+    }
+}
+
+@media screen and (max-width:370px){
+    .signin{
+        justify-content: center;
+    }
+    .centerform{
+        width:80%;
+    }
+}
